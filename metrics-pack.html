@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Metrics Pack — AI Notes — Trần Vũ Gia Huy</title>
+  <style>
+    :root{--ink:#10233d;--muted:#53657a;--paper:#f5f7fb;--card:#fff;--line:#dce4ef;--blue:#2855d9;--cyan:#16a6b6;--green:#0f8a63;--amber:#b86b00;--lav:#eef1ff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    .hero{background:linear-gradient(130deg,#10233d 0%,#1c3b76 56%,#197a91 100%);color:#fff;padding:64px max(24px,calc((100vw - 1120px)/2)) 52px}.eyebrow{font-size:.8rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#aee8ef}.hero h1{font-size:clamp(2.2rem,5vw,4.5rem);line-height:1.02;margin:.5rem 0 1rem;max-width:850px}.hero p{max-width:760px;color:#dce9ff;font-size:1.1rem}.identity{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}.pill{border:1px solid rgba(255,255,255,.26);background:rgba(255,255,255,.1);border-radius:999px;padding:7px 13px;font-size:.9rem}
+    nav{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);overflow:auto;white-space:nowrap;padding:10px max(16px,calc((100vw - 1120px)/2))}nav a{display:inline-block;text-decoration:none;color:var(--muted);font-weight:700;padding:7px 10px;border-radius:8px}nav a:hover{background:var(--lav);color:var(--blue)}
+    main{max-width:1120px;margin:auto;padding:34px 20px 70px}.section{margin:0 0 30px}.section-head{display:flex;gap:14px;align-items:center;margin:0 0 14px}.num{display:grid;place-items:center;width:44px;height:44px;border-radius:13px;background:var(--blue);color:#fff;font-weight:900}.section h2{font-size:1.55rem;margin:0}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}.card{grid-column:span 12;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 8px 30px rgba(21,40,74,.05)}.half{grid-column:span 6}.third{grid-column:span 4}.accent{background:linear-gradient(145deg,#fff,#f0f5ff);border-color:#cdd8ff}.success{border-left:5px solid var(--green)}.warn{border-left:5px solid var(--amber)}h3{margin:0 0 10px;font-size:1.05rem}p{margin:.35rem 0 0}.label{font-size:.73rem;text-transform:uppercase;letter-spacing:.09em;font-weight:900;color:var(--blue)}.big{font-size:1.24rem;font-weight:850;line-height:1.35}.muted{color:var(--muted)}
+    table{width:100%;border-collapse:collapse;font-size:.93rem}th,td{text-align:left;vertical-align:top;border-bottom:1px solid var(--line);padding:10px 8px}th{color:var(--muted);font-size:.78rem;text-transform:uppercase;letter-spacing:.05em}tr:last-child td{border-bottom:0}.check{color:var(--green);font-weight:900}.flow{display:grid;grid-template-columns:repeat(7,1fr);align-items:stretch;gap:8px;margin-top:12px}.node{background:#f5f7ff;border:1px solid #ced8ff;border-radius:12px;padding:12px 10px;font-size:.82rem;font-weight:750;display:grid;place-items:center;text-align:center;min-height:82px}.arrow{display:none}.metric{font-size:1.08rem;background:#10233d;color:#fff;border-radius:14px;padding:18px}.metric small{display:block;color:#aee8ef;margin-bottom:5px;text-transform:uppercase;letter-spacing:.08em;font-weight:800}.events{counter-reset:event}.event{counter-increment:event;position:relative;padding-left:47px}.event:before{content:counter(event);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:10px;background:var(--lav);color:var(--blue);display:grid;place-items:center;font-weight:900}code{background:#eef2f7;border-radius:6px;padding:2px 5px;color:#18335f;font-size:.86em}.footer{text-align:center;color:var(--muted);padding:26px;border-top:1px solid var(--line)}
+    @media(max-width:760px){.half,.third{grid-column:span 12}.flow{grid-template-columns:1fr}.hero{padding-top:44px}.hero h1{font-size:2.5rem}}
+    @media print{nav{display:none}.hero{padding:35px;background:#18335f!important}.card{break-inside:avoid;box-shadow:none}.section{break-before:auto}body{background:#fff}main{padding:20px}.footer{display:none}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="eyebrow">Lab Day 20 · Product Metrics</div>
+    <h1>AI Notes<br>Metrics Pack</h1>
+    <p>Một chuỗi quyết định từ hành vi tạo giá trị đến cadence, metric, retention, product loop và tracking — cho use case learner cùng AI tổ chức ghi chú học tập.</p>
+    <div class="identity"><span class="pill">Trần Vũ Gia Huy</span><span class="pill">2A202602705</span><span class="pill">Option B — Cùng tổ chức</span></div>
+  </header>
+  <nav aria-label="Mục lục"><a href="#s0">00 Phạm vi</a><a href="#s1">01 Core Action</a><a href="#s2">02 Cadence</a><a href="#s3">03 Metrics</a><a href="#s4">04 Retention</a><a href="#s5">05 Loop</a><a href="#s6">06 Tracking</a><a href="#gates">Gates</a></nav>
+  <main>
+    <section class="section" id="s0"><div class="section-head"><div class="num">00</div><h2>Phạm vi</h2></div><div class="grid">
+      <article class="card third"><div class="label">Dự án</div><p class="big">AI Notes — Personal Learning Notes</p><p class="muted">Learner chọn dấu vết, AI hỗ trợ tổ chức, learner duyệt và lưu.</p></article>
+      <article class="card third"><div class="label">Persona</div><p class="big">Learner học hoặc research thường xuyên</p><p class="muted">Có highlight, câu hỏi, điểm chưa hiểu hoặc ghi chú muốn dùng lại.</p></article>
+      <article class="card third accent"><div class="label">Core job</div><p class="big">“Giữ phần kiến thức quan trọng cùng ngữ cảnh để tìm và dùng lại.”</p></article>
+      <article class="card warn"><strong>Ranh giới bằng chứng.</strong> Lab 18 có 2/2 tester chọn Option B vì trực quan và hỗ trợ tổ chức, nhưng mẫu nhỏ chưa chứng minh retention hoặc retrieval dài hạn. Các window và threshold dưới đây là giả định ban đầu cần telemetry kiểm chứng.</article>
+    </div></section>
+
+    <section class="section" id="s1"><div class="section-head"><div class="num">01</div><h2>Core Action</h2></div><div class="grid">
+      <article class="card accent"><div class="label">Hành vi được chọn</div><p class="big">Learner duyệt và lưu một learning note được tổ chức từ các dấu vết đã chọn.</p><p class="muted">Không phải mở app, hỏi AI, bấm “Tạo ghi chú” hoặc việc AI sinh ra bản nháp.</p></article>
+      <article class="card half"><h3>Completion rule</h3><p>Đã xử lý mọi section bắt buộc; bấm lưu; server lưu thành công và trả <code>note_id</code>. Qualifying note có ≥2 evidence hợp lệ, ≥1 source link và review hoàn tất.</p></article>
+      <article class="card half"><h3>Evidence of value</h3><p>Note tồn tại trong thư viện, mở lại được, giữ phần learner đã duyệt và liên kết đúng về nguồn. Evidence mạnh hơn về value dài hạn là <code>note_retrieved</code>.</p></article>
+      <article class="card success"><table><thead><tr><th>Gần value</th><th>Lặp lại</th><th>Quan sát</th><th>Ý nghĩa</th><th>Tác động</th></tr></thead><tbody><tr><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr></tbody></table><p><strong>Gate 1: đạt 5/5.</strong></p></article>
+    </div></section>
+
+    <section class="section" id="s2"><div class="section-head"><div class="num">02</div><h2>Nature &amp; cadence</h2></div><div class="grid">
+      <article class="card half"><h3>Nature</h3><table><tbody><tr><th>Intent</th><td>Khép lại lượt học với phần kiến thức đáng giữ.</td></tr><tr><th>Trigger</th><td>Hoàn thành learning item/chủ đề hoặc cần dùng lại kiến thức.</td></tr><tr><th>Value timing</th><td>Ngay khi lưu note; mạnh hơn khi tìm và dùng lại.</td></tr><tr><th>Repeat</th><td>Learning item mới tạo ra evidence và lý do lưu mới.</td></tr></tbody></table></article>
+      <article class="card half accent"><div class="label">Kết luận cadence</div><p class="big">Tiến trình tích lũy, kích hoạt theo sự kiện học tập.</p><p>Theo <strong>learning cycle</strong>, tổng hợp theo <strong>tuần</strong> ở cấp learner. Không ép daily; nhiều note hơn chưa chắc tốt hơn nếu note bị vụn.</p></article>
+      <article class="card success"><strong>Gate 2: đạt.</strong> Nhịp đo xuất phát từ lịch học và learning item mới, không từ cấu trúc dashboard hoặc notification.</article>
+    </div></section>
+
+    <section class="section" id="s3"><div class="section-head"><div class="num">03</div><h2>Metric System</h2></div><div class="grid">
+      <article class="card third"><div class="label">Activation start</div><p class="big"><code>learning_session_completed</code></p><p class="muted">Learning session đầu tiên đủ điều kiện tạo note.</p></article>
+      <article class="card third"><div class="label">Activation event</div><p class="big"><code>learning_note_saved</code></p><p class="muted">Qualifying note đầu tiên.</p></article>
+      <article class="card third"><div class="label">Window</div><p class="big">Trong 7 ngày</p><p class="muted">Giả định ban đầu, hiệu chỉnh theo dữ liệu.</p></article>
+      <article class="card half"><h3>Engagement</h3><p><strong>Frequency:</strong> qualifying notes / activated learner / tuần học tích cực.</p><p><strong>Depth:</strong> tỷ lệ section được duyệt và median evidence hợp lệ / note.</p></article>
+      <article class="card half"><h3>Leading indicators</h3><p>Session có ≥2 evidence · started → review completed · median time session completed → note saved.</p></article>
+      <article class="card"><div class="metric"><small>North Star Metric</small><strong>Weekly Reusable Learning Notes (WRLN)</strong><br>Số note riêng biệt được lưu mỗi tuần, review hoàn tất, có ≥2 evidence hợp lệ và ≥1 source link, bởi learner thật.</div></article>
+      <article class="card half"><h3>Quality counter-metric</h3><p class="big">30-day useful retrieval rate</p><p class="muted">WRLN tăng nhưng retrieval giảm là tín hiệu kho note mất giá trị.</p></article>
+      <article class="card half"><h3>Rework counter-metric</h3><p class="big">Major rework trong 24 giờ</p><p class="muted">Sửa/xóa &gt;50% có thể báo chất lượng AI hoặc review flow có vấn đề.</p></article>
+    </div></section>
+
+    <section class="section" id="s4"><div class="section-head"><div class="num">04</div><h2>Retention Definition</h2></div><div class="grid"><article class="card"><table><thead><tr><th>Thành phần</th><th>Định nghĩa</th></tr></thead><tbody>
+      <tr><td><strong>Unit</strong></td><td><code>user_id</code> của activated learner.</td></tr><tr><td><strong>Cohort entry</strong></td><td>Qualifying <code>learning_note_saved</code> đầu tiên.</td></tr><tr><td><strong>Return event</strong></td><td>Qualifying note khác trên một <code>learning_item_id</code> khác.</td></tr><tr><td><strong>Window</strong></td><td>Ngày 8–21 sau cohort entry.</td></tr><tr><td><strong>Threshold</strong></td><td>Ít nhất 1 return event trong window.</td></tr><tr><td><strong>Segment</strong></td><td>Learner trong khóa/chủ đề hoạt động, có ≥2 session đủ điều kiện trong 30 ngày; loại staff/test/bot/demo.</td></tr>
+      </tbody></table></article><article class="card success"><strong>Metric đầy đủ:</strong> Activated learner retention ngày 8–21 qua một qualifying note mới trên learning item khác, trong segment learner đang học tích cực.</article></div></section>
+
+    <section class="section" id="s5"><div class="section-head"><div class="num">05</div><h2>Product Loop</h2></div><div class="grid">
+      <article class="card"><div class="label">Loại loop</div><p class="big">Progress loop — kho kiến thức cá nhân lớn lên theo learning cycle.</p><div class="flow"><div class="node">Hoàn thành learning item A</div><div class="node">Đánh dấu evidence</div><div class="node">Duyệt + lưu note A</div><div class="node">Note + nguồn được giữ</div><div class="node">Item B / nhu cầu dùng lại</div><div class="node">Tìm note A + evidence mới</div><div class="node">Duyệt + lưu note B</div></div></article>
+      <article class="card accent"><div class="label">Metric hypothesis</div><p class="big">Nếu loop hoạt động, activated learner retention ngày 8–21 sẽ tăng so với cohort baseline trong 8 tuần, vì mỗi learning cycle tạo evidence mới và kho note có nguồn làm lần tổ chức/tìm lại tiếp theo có giá trị hơn.</p></article>
+      <article class="card success"><strong>Gate 4: đạt.</strong> Có hai chu kỳ; reason to return là lịch học, nội dung mới và nhu cầu dùng kiến thức — không phải notification.</article>
+    </div></section>
+
+    <section class="section" id="s6"><div class="section-head"><div class="num">06</div><h2>Tracking nhanh</h2></div><div class="grid">
+      <article class="card half events"><h3 class="event"><code>learning_session_completed</code></h3><h3 class="event"><code>learning_evidence_marked</code></h3><h3 class="event"><code>note_organization_started</code></h3><h3 class="event"><code>note_section_reviewed</code></h3></article>
+      <article class="card half events"><h3 class="event"><code>note_review_completed</code></h3><h3 class="event"><code>learning_note_saved</code></h3><h3 class="event"><code>note_retrieved</code></h3><h3 class="event"><code>learning_note_major_reworked</code></h3></article>
+      <article class="card"><h3>Acceptance criteria trọng yếu</h3><ol><li>Chỉ ghi save sau transaction thành công; retry/reload/double-click không tạo trùng.</li><li>Chỉ ghi review completed khi mọi section bắt buộc đã được xử lý.</li><li>Retrieval cần mở note cũ từ search/library và có edit, copy hoặc mở source trong 10 phút.</li><li>WRLN chỉ nhận note thỏa đủ review/evidence/source và identity hợp lệ.</li><li>Analytics không chứa raw note, highlight hoặc prompt; chỉ ID, type và count theo allowlist.</li></ol></article>
+    </div></section>
+
+    <section class="section" id="gates"><div class="section-head"><div class="num">✓</div><h2>Final gate check</h2></div><div class="grid">
+      <article class="card success"><table><thead><tr><th>Gate</th><th>Kết quả</th><th>Bằng chứng</th></tr></thead><tbody><tr><td>1 · Core Action</td><td class="check">Đạt</td><td>Actor, object, completion rule; 5/5 tiêu chí.</td></tr><tr><td>2 · Cadence</td><td class="check">Đạt</td><td>Learning cycle, tổng hợp tuần; reason từ nature.</td></tr><tr><td>3 · Metric & Retention</td><td class="check">Đạt</td><td>Activation đủ 3 phần; retention đủ 6; NSM + counter.</td></tr><tr><td>4 · Loop</td><td class="check">Đạt</td><td>Hai chu kỳ và hypothesis nối retention.</td></tr><tr><td>5 · Tracking</td><td class="check">Đạt</td><td>8 event map metric; 5 acceptance criteria.</td></tr></tbody></table></article>
+      <article class="card warn"><strong>Điểm cần kiểm chứng bằng dữ liệu thật:</strong> activation 7 ngày; retention ngày 8–21; ngưỡng 2 evidence + 1 source; retrieval action trong 10 phút; major rework &gt;50% trong 24 giờ.</article>
+    </div></section>
+  </main>
+  <footer class="footer">Trần Vũ Gia Huy · 2A202602705 · Lab Day 20 · Chi tiết định nghĩa và event mapping nằm trong <strong>metrics-pack.md</strong>.</footer>
+</body>
+</html>
